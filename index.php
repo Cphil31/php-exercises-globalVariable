@@ -3,13 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div>
-	<a href="contenu.php">contenu</a>
+	<div class="menu" >
+	<a href="contenu.php">Contenu</a>
 		
 	</div>
-<div>
+<div class="phrase">
 	
 	<?php 
 
@@ -17,12 +18,12 @@ echo "Bonjour ".$_POST['genre']." ".$_POST['Nom']." ".$_POST['Prenom']." votre u
 
 ?>
 </div>
-<div>
+<div class="phrase">
 <?php 
 echo "Votre adresse Ip est : ".$_SERVER["REMOTE_ADDR"];
  ?>	
 </div>
-<div>
+<div class="phrase">
 <?php 
 	echo " Le nom du serveur est : ".$_SERVER['DOCUMENT_ROOT'];
  ?>
