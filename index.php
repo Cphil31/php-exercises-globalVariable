@@ -5,24 +5,29 @@
 	<title>Document</title>
 </head>
 <body>
-	
-
-	<form action="user.php" method="POST">
-
-		<SELECT name="genre" >
-			<OPTION>Mr
-			<OPTION>Mme
-			<OPTION>Mlle
-		</SELECT>
-
-		<label for="">Nom</label>
-		<input type="text" name="Nom">
-		<label for="">Prénom </label>
-		<input type="text" name ="Prenom">
-		<input type="submit" name="submit" value="Valider">
-
-	</form> 
+	<div>
 	<a href="contenu.php">contenu</a>
+		
+	</div>
+<div>
+	
+	<?php 
+
+echo "Bonjour ".$_POST['genre']." ".$_POST['Nom']." ".$_POST['Prenom']." votre user agent est : ".$_SERVER['HTTP_USER_AGENT'];
+
+?>
+</div>
+<div>
+<?php 
+echo "Votre adresse Ip est : ".$_SERVER["REMOTE_ADDR"];
+ ?>	
+</div>
+<div>
+<?php 
+	echo " Le nom du serveur est : ".$_SERVER['DOCUMENT_ROOT'];
+ ?>
+
+</div>
 
 
 			</body>
