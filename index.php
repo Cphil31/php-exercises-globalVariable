@@ -1,6 +1,8 @@
 		<?php 
 		setcookie("user",$_POST['user'],time() + 365*24*3600, null, null, false, true);
 		setcookie("login",$_POST['login'],time() + 365*24*3600, null, null, false, true);
+		setcookie("user",$_POST['user'],time() + 365*24*3600, null, null, false, true);
+		setcookie("login",$_POST['login'],time() + 365*24*3600, null, null, false, true);
 
 		 ?>
 <!DOCTYPE html>
