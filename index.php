@@ -1,13 +1,11 @@
-	<?php
-	session_start();
+		<?php 
+		setcookie("user",$_POST['user'],time() + 365*24*3600, null, null, false, true);
+		setcookie("login",$_POST['login'],time() + 365*24*3600, null, null, false, true);
 
-	$_SESSION['nom'] = 'CHRIST'; 
-	$_SESSION['prenom'] = 'Jesus';
-	$_SESSION['age'] = '33';
-
-	?>
+		 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -22,7 +20,7 @@
 
 		<?php 
 		include ('style.php');
-		echo "Bonjour ".$_SESSION['genre']." ".$_SESSION['Nom']." ".$_SESSION['Prenom']." votre user agent est : ".$_SERVER['HTTP_USER_AGENT'];
+		echo "Bonjour ".$_POST['genre']." ".$_POST['Nom']." ".$_POST['Prenom']." votre user agent est : ".$_SERVER['HTTP_USER_AGENT'];
 
 		?>
 	</div>
@@ -37,7 +35,9 @@
 		?>
 
 	</div>
+<?php 
 
+ ?>
 	<form action="index.php" method="POST">
 		<div>
 			<label for="">User : </label>
@@ -52,6 +52,16 @@
 		</div>
 
 	</form>
-	
+	<?php 
+	if (isset($_POST['user']) && isset($_POST['login'])){
+
+		echo $_POST['user'].' '.$_POST['login'];
+
+	}
+	else {
+
+	}
+
+	?>
 </body>
 </html>
