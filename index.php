@@ -1,3 +1,11 @@
+	<?php
+	session_start();
+
+	$_SESSION['nom'] = 'CHRIST'; 
+	$_SESSION['prenom'] = 'Jesus';
+	$_SESSION['age'] = '33';
+
+	?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +22,7 @@
 
 		<?php 
 		include ('style.php');
-		echo "Bonjour ".$_POST['genre']." ".$_POST['Nom']." ".$_POST['Prenom']." votre user agent est : ".$_SERVER['HTTP_USER_AGENT'];
+		echo "Bonjour ".$_SESSION['genre']." ".$_SESSION['Nom']." ".$_SESSION['Prenom']." votre user agent est : ".$_SERVER['HTTP_USER_AGENT'];
 
 		?>
 	</div>
@@ -32,7 +40,7 @@
 
 	<form action="index.php" method="POST">
 		<div>
-		<label for="">User : </label>
+			<label for="">User : </label>
 			<input type="text" name="user">
 		</div>
 		<div>
@@ -44,7 +52,6 @@
 		</div>
 
 	</form>
-
-
+	
 </body>
 </html>
