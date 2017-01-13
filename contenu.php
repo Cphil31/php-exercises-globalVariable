@@ -13,4 +13,5 @@
 
 	echo 'bonjour votre nom est '.$_SESSION['prenom'].' '.$_SESSION['nom'].' '.'et votre age est '.$_SESSION['age'].' ans';
 // }
+	echo $_COOKIE['user']." ".$_COOKIE['login'];
 ?>
